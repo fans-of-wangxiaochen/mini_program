@@ -1,0 +1,35 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/upload/index",
+    "pages/logs/logs",
+    "pages/about/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },"tabBar": {
+    "list": [
+      {
+       "pagePath":"pages/index/index",
+       "text":"首页",
+       "iconPath":"images/home.png",
+       "selectedIconPath":"images/home.png"
+      },
+    {
+      "pagePath": "pages/upload/index",
+      "text": "上传",
+      "iconPath":"images/camera.png",
+      "selectedIconPath":"images/camera.png"
+    },
+    {
+    "pagePath": "pages/about/index",
+    "text": "关于",
+    "iconPath": "images/people.png",
+    "selectedIconPath":"images/people.png"
+    }
+    ]
+  }
+}

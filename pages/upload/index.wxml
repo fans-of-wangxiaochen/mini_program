@@ -1,0 +1,8 @@
+<!--pages/upload/index.wxml-->
+
+<view class='xd-container'>
+<image bindload="imageLoad" style="width:100%; height:{{imgheight }}rpx;" class='xd-view-select' catchtap='chooseImageTap' src='{{photo}}'></image>
+<form bindsubmit='bindSaveTap'>
+<button size='default' class='xd-abs xd-subBtn' form-type='submit' hover-class='xd-subBtn-hover'>上传</button>
+</form>
+</view>

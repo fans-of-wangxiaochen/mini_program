@@ -1,0 +1,14 @@
+.function{
+font-size: 50rpx;
+color: blue;
+}
+
+.backend{
+font-size: 50rpx;
+color: blue;
+}
+
+.link{
+font-size: 35rpx;
+color: blue;
+}

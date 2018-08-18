@@ -1,0 +1,43 @@
+<!--pages/about/index.wxml-->
+<text>
+在小程序创建之初，我曾经上传过一个使用第三方网站一键拖拽生成的小程序，主要做爱豆资讯，后来由于小程序审核的原因，不允许个人开发者制作该内容的小程序，所以一直没有了下文。
+
+最近，看小程序后台，竟然有将近 800 人次访问过这个一年多没有维护过的小程序，一直想着重启该项目。
+
+今天 2018 年 8 月 19 日，我重新发布了 0.0.1 版本。
+
+</text>
+
+<text class='function'>这个小程序是干什么的？？？</text>
+
+<text>
+
+核心组件就两个，一个是图片选择框，一个是上传按钮。功能就是收集我们爱豆王晓晨的照片！
+
+现在点击左边上传按钮，把手机里我们爱豆的照片交出来！
+
+</text>
+
+<text class='backend'>后端实现</text>
+
+<text>
+
+调用 TencentAI API 进行人脸识别，可信度超过 80 就把照片上传到 OneDrive。
+
+由于众所周知的原因，OneDrive 分享不了图片，后边怎么查看照片列表再说。
+
+最后，欢迎有一定编程经验的朋友，加入 
+
+</text>
+
+<text class='link'>https://github.com/fans-of-wangxiaochen</text>
+
+<text>
+
+一起用代码追随爱豆的脚步。
+
+本项目代码在 GitHub 开源，有任何问题或功能建议请访问 
+
+</text>
+
+<text class='link'>https://github.com/fans-of-wangxiaochen/cxyl</text>

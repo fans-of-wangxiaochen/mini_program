@@ -1,0 +1,9 @@
+/* pages/upload/index.wxss */
+.xd-view-select{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.xd-subBtn-hover{
+  color: green
+}
