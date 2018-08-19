@@ -86,7 +86,7 @@ Page({
       mask: true
     });
 
-    wx.uploadFile({
+    const uploadTask = wx.uploadFile({
       url: 'https://mini.cxyl.khs1994.com/photo/upload',
       filePath: _this.data.photo,
       name: 'photo',
@@ -103,7 +103,7 @@ Page({
 
         if (res.statusCode === 200) {
           title = '成功 👍';
-          message = `用时 ${use_time} s 期待你上传更多照片`;
+          message = `用时 ${use_time}s 期待你上传更多照片`;
           _this.setData({
             photo: "/images/upload.svg"
           });
@@ -149,6 +149,16 @@ Page({
       complete: function () {
       }
 
+    })
+
+    uploadTask.onProgressUpdate(res => {
+      if( res.progress === 100){
+        wx.hideLoading();
+        wx.showLoading({
+          title: 'AI 引擎分析中',
+          mask: true,
+        })
+      }
     })
   },
 

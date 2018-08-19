@@ -41,10 +41,10 @@ Page({
             // 文件过期
             if (res.stats.lastModifiedTime > Math.round(new Date() / 1000) + 24 * 3600) {
               console.log('about file cache exprie');
-              _this.request_about_file(_this);
+              _this.request_about_file();
             } else {
               console.log('about file cache create less than 1 day');
-              _this.markdown(_this)
+              _this.markdown()
             }
           }
         })
@@ -53,7 +53,7 @@ Page({
       // 缓存文件不存在
       fail: (res) => {
         console.log('about file not exists, request');
-        _this.request_about_file(_this);
+        _this.request_about_file();
       }
     });
 
@@ -102,13 +102,14 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    console.log('onReady');
   },
 
-  request_about_file: (_this) => {
+  request_about_file: function() {
     console.log('request');
 
     let fs = wx.getFileSystemManager();
+    let _this = this;
 
     wx.request({
       url: 'https://mini.cxyl.khs1994.com/article/1',
@@ -125,20 +126,21 @@ Page({
 
         let content = res.data.content;
         fs.writeFileSync(`${wx.env.USER_DATA_PATH}/about.txt`, content, 'utf8');
-        _this.markdown(_this)
+        _this.markdown()
       },
 
       fail: function () {
         console.log('request fail');
         content = '# 页面请求错误';
         fs.writeFileSync(`${wx.env.USER_DATA_PATH}/about.txt`, content, 'utf8');
-        _this.markdown(_this)
+        _this.markdown()
       }
     });
   },
 
-  markdown: (_this) => {
+  markdown: function() {
     let fs = wx.getFileSystemManager();
+    let _this = this;
     // 读取缓存文件
     fs.readFile({
       filePath: _this.about_file_path,

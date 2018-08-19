@@ -1,7 +1,7 @@
 {
-    "description": "项目配置文件。",
-    "miniprogramRoot": "./client",
-    "qcloudRoot":"./server",
+  "description": "项目配置文件。",
+  "miniprogramRoot": "./client",
+  "qcloudRoot":"./server",
 	"packOptions": {
 		"ignore": []
 	},
