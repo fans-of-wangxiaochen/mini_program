@@ -1,66 +1,50 @@
 // pages/about/index.js
+
+const app = getApp();
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+      article: {}
   },
 
   /**
    * 生命周期函数--监听页面加载
-   */
+   */ 
   onLoad: function (options) {
-  
-  },
+      let _this=this;
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
-  },
+      wx.showLoading({
+        title: "努力加载中...",
+        mask: true,
+      });
+    
+      wx.request({
+          url: 'https://project.t.khs1994.com/article/1',
+          
+          success: function (res) {
+              if (res.statusCode != 200) {
+                wx.showModal({
+                  title: '页面加载错误',
+                  content: '请稍后再试',
+                });
+                wx.hideLoading();
+                return;
+              }
+              let data = app.towxml.toJson(res.data.content, 'markdown');
+              data.theme = 'light';
+              wx.hideLoading();
+              _this.setData({
+                article: data
+              })
+          },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
-  }
+          fail: function () {
+              console.log('fail');
+          }
+       })
+  }, 
 });

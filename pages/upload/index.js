@@ -66,11 +66,18 @@ Page({
 
           return;
         }
+        
+        wx.showLoading({
+           title: "努力上传中...",
+           mask: true
+        });
+
         wx.uploadFile({
             url: 'https://mini.cxyl.khs1994.com/photo/upload',
             filePath: _this.data.photo,
             name: 'photo',
             success: function (res) {
+                wx.hideLoading();
                 console.log('success');
                 console.log(res);
                 let finishTime = (new Date()).valueOf();
@@ -98,6 +105,9 @@ Page({
                     _this.setData({
                         photo: "/images/upload.svg"
                     });
+                }else if (res.statusCode == 413){
+                    title = '图片太大 😐'
+                    message = '请换一张图片试试';
                 }else{
                     title = '工程师外出 ✈';
                     message = '服务器开小差了，请稍后再试';
@@ -112,6 +122,7 @@ Page({
             fail: function (res) {
                 console.log('fail');
                 console.log(res);
+                wx.hideLoading();
                 let finishTime = (new Date()).valueOf();
                 let use_time = finishTime - startTime;
                 use_time = use_time / 1000;
