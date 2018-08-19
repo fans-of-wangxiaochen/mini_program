@@ -35,3 +35,7 @@ indent_style = tab
 [{package.json,.travis.yml,.khsci.yml,.drone.yml}]
 
 indent_size = 2
+
+[*.js]
+
+indent_size = 2

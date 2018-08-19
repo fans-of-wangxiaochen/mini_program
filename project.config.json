@@ -1,5 +1,7 @@
 {
-	"description": "项目配置文件。",
+    "description": "项目配置文件。",
+    "miniprogramRoot": "./client",
+    "qcloudRoot":"./server",
 	"packOptions": {
 		"ignore": []
 	},
@@ -11,7 +13,7 @@
 		"newFeature": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.2.2",
+	"libVersion": "2.2.3",
 	"appid": "wx767dab1b29691501",
 	"projectname": "cxyl",
 	"isGameTourist": false,
