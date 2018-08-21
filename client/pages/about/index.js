@@ -39,12 +39,13 @@ Page({
           path: about_file_path,
           success: (res) => {
             // 文件过期
-            if (res.stats.lastModifiedTime > Math.round(new Date() / 1000) + 24 * 3600) {
+            console.log(res.stats.lastModifiedTime);
+            if (res.stats.lastModifiedTime > Math.round(new Date() / 1000) + 60*60) {
               console.log('about file cache exprie');
               _this.request_about_file();
             } else {
-              console.log('about file cache create less than 1 day');
-              _this.markdown()
+              console.log('about file cache create less than 1 hour');
+              _this.markdown();
             }
           }
         })
@@ -131,7 +132,7 @@ Page({
 
       fail: function () {
         console.log('request fail');
-        content = '# 页面请求错误';
+        let content = '# 页面请求错误';
         fs.writeFileSync(`${wx.env.USER_DATA_PATH}/about.txt`, content, 'utf8');
         _this.markdown()
       }

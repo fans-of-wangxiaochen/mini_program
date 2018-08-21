@@ -20,7 +20,7 @@
       },
       {
       "pagePath": "pages/upload/index",
-      "text": "上传",
+      "text": "照片识别",
       "iconPath":"images/camera.png",
       "selectedIconPath":"images/camera.png"
       },

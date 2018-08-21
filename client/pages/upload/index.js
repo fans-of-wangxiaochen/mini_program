@@ -103,13 +103,13 @@ Page({
 
         if (res.statusCode === 200) {
           title = '成功 👍';
-          message = `用时 ${use_time}s 期待你上传更多照片`;
+          message = `用时 ${use_time}s 这是我的爱豆`;
           _this.setData({
             photo: "/images/upload.svg"
           });
         } else if (res.statusCode === 304) {
           title = '确认过眼神，我遇见对的人 😎';
-          message = '照片已存在，换一张图片试试吧';
+          message = '这是我的爱豆';
           _this.setData({
             photo: "/images/upload.svg"
           });
