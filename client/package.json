@@ -1,0 +1,15 @@
+{
+  "name": "cxyl",
+  "description": "cxyl miniprogram",
+  "version": "19.6.0",
+  "dependencies": {
+    "towxml": "github:pcit-ce/towxml"
+  },
+  "devDependencies": {
+    "@types/wx": "github:khs1994/types-wx"
+  },
+  "scripts": {
+    "compile": "npx tsc",
+    "compile:pro": "npx tsc"
+  }
+}

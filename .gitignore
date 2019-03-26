@@ -1,1 +1,8 @@
 .idea
+
+/client/*.js
+/client/pages/**/*.js
+/client/utils/*.js
+
+node_modules
+miniprogram_npm

@@ -1,7 +1,7 @@
 {
-  "description": "项目配置文件。",
-  "miniprogramRoot": "./client",
-  "qcloudRoot":"./server",
+	"description": "cxyl miniprogram",
+	"miniprogramRoot": "client/",
+	"qcloudRoot": "server/",
 	"packOptions": {
 		"ignore": []
 	},
@@ -10,13 +10,22 @@
 		"es6": true,
 		"postcss": true,
 		"minified": true,
-		"newFeature": true
+		"newFeature": true,
+		"nodeModules": true,
+		"checkInvalidKey": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.2.3",
+	"libVersion": "2.6.4",
 	"appid": "wx767dab1b29691501",
 	"projectname": "cxyl",
 	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"scripts": {
+    "beforeCompile": "cd client && npm run compile",
+		"beforePreview": "cd client && npm run compile:pro",
+		"beforeUpload": "cd client && npm run compile:pro"
+	},
 	"condition": {
 		"search": {
 			"current": -1,

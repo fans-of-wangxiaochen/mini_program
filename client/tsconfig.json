@@ -1,0 +1,17 @@
+{
+  "compilerOptions":{
+    "module":"CommonJS",
+     "target": "ES5",
+     "newLine":"LF",
+     "lib":[
+       "ESNext",
+       "dom"
+     ]
+  },
+  "include":[
+    "./**/*.ts"
+  ],
+  "exclude":[
+    "node_modules","miniprogram_dist"
+  ]
+}

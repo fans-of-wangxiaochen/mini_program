@@ -1,0 +1,9 @@
+{
+  "name": "cxyl",
+  "version": "19.6.0",
+  "description": "cxyl miniprogram",
+  "scripts": {
+    "preinstall": "echo dont't exec install command && exit 1",
+    "fmt": "prettier --write ./**/*.ts ./**/*.md"
+  }
+}
