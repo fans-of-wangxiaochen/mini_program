@@ -27,6 +27,12 @@ Page({
     });
   },
 
+  magazine() {
+    wx.navigateTo({
+      url: '../magazine/index',
+    });
+  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -164,6 +170,12 @@ Page({
     });
   },
 
+  more() {
+    wx.navigateTo({
+      url: '/pages/photo/index',
+    });
+  },
+
   /**
    * 生命周期函数--监听页面显示
    */
@@ -192,7 +204,7 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  // onShareAppMessage: function () {
-  //
-  // }
+  onShareAppMessage: function() {
+    return {};
+  },
 });

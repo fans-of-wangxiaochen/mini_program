@@ -1,47 +1,67 @@
 {
-	"description": "cxyl miniprogram",
-	"miniprogramRoot": "client/",
-	"qcloudRoot": "server/",
-	"packOptions": {
-		"ignore": []
-	},
-	"setting": {
-		"urlCheck": false,
-		"es6": true,
-		"postcss": true,
-		"minified": true,
-		"newFeature": true,
-		"nodeModules": true,
-		"checkInvalidKey": true
-	},
-	"compileType": "miniprogram",
-	"libVersion": "2.6.4",
-	"appid": "wx767dab1b29691501",
-	"projectname": "cxyl",
-	"isGameTourist": false,
-	"simulatorType": "wechat",
-	"simulatorPluginLibVersion": {},
-	"scripts": {
+  "description": "cxyl miniprogram",
+  "miniprogramRoot": "client/",
+  "cloudfunctionRoot": "functions/",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": true,
+    "es6": true,
+    "postcss": true,
+    "minified": true,
+    "newFeature": true,
+    "nodeModules": true,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    }
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.7.0",
+  "appid": "wx767dab1b29691501",
+  "projectname": "cxyl",
+  "isGameTourist": false,
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "scripts": {
     "beforeCompile": "cd client && npm run compile",
-		"beforePreview": "cd client && npm run compile:pro",
-		"beforeUpload": "cd client && npm run compile:pro"
-	},
-	"condition": {
-		"search": {
-			"current": -1,
-			"list": []
-		},
-		"conversation": {
-			"current": -1,
-			"list": []
-		},
-		"game": {
-			"currentL": -1,
-			"list": []
-		},
-		"miniprogram": {
-			"current": -1,
-			"list": []
-		}
-	}
+    "beforePreview": "cd client && npm run compile:pro",
+    "beforeUpload": "cd client && npm run compile:pro"
+  },
+  "condition": {
+    "search": {
+      "current": -1,
+      "list": []
+    },
+    "conversation": {
+      "current": -1,
+      "list": []
+    },
+    "plugin": {
+      "current": -1,
+      "list": []
+    },
+    "game": {
+      "currentL": -1,
+      "list": []
+    },
+    "miniprogram": {
+      "current": 0,
+      "list": [
+        {
+          "id": 0,
+          "name": "t",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": 1047
+        }
+      ]
+    }
+  }
 }

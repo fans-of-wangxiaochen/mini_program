@@ -1,0 +1,11 @@
+<ad unit-id="adunit-02a44e54e6494b36"></ad>
+
+<view>
+  <view wx:for="{{list}}">
+    <view class="grid" bind:tap="navigate" data-source="{{item.source}}">
+      <view class="grid_name">{{item.name}}</view>
+      <view class="grid_from">{{item.from}}</view>
+      <view class="grid_date"><icon type="waiting" size="15" /> {{item.date}}</view>
+      </view>
+  </view>
+</view>

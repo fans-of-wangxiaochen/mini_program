@@ -1,4 +1,11 @@
 <!--pages/about/index.wxml-->
 
+<ad unit-id="adunit-02a44e54e6494b36"></ad>
+
+<view style="margin-left:2vw;width:96vw">
+<view style="height:2vh"></view>
+<official-account></official-account>
+</view>
+
 <import src="/towxml/entry.wxml"/>
 <template is="entry" data="{{...article}}"/>

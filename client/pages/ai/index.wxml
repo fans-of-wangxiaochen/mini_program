@@ -1,0 +1,12 @@
+<view>
+<i-grid>
+    <i-grid-item bind:tap="tap">
+        <!-- <i-grid-icon>
+            <image src="../images/icon-vip.png" />
+        </i-grid-icon> -->
+        <i-grid-label>人像分割</i-grid-label>
+    </i-grid-item>
+    <!-- <i-grid-item>Grid</i-grid-item>
+    <i-grid-item>Grid</i-grid-item> -->
+</i-grid>
+</view>

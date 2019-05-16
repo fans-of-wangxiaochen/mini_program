@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "markdown": "/components/towxml/index"
+  },
+  "navigationStyle": "custom"
+}

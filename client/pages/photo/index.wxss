@@ -1,0 +1,25 @@
+page {
+  background-color: #F8F8F8;
+}
+
+image {
+  margin-left: 2vw;
+  margin-top: 2vh;
+  display: inline-block;
+  width: 47vw;
+  height: 33vh;
+  float: left;
+}
+
+.head {
+  width: 100vw;
+  height: 30vh;
+  background-color: #020333;
+  margin-bottom: 1vh;
+}
+
+.head image {
+  margin-left: 50vw;
+  margin-top: 0;
+  height: 30vh;
+}

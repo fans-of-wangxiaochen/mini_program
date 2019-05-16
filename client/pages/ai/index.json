@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "i-grid": "/ui/iview/grid/index",
+    "i-grid-item": "/ui/iview/grid-item/index",
+    "i-grid-icon": "/ui/iview/grid-icon/index",
+    "i-grid-label": "/ui/iview/grid-label/index"
+  },
+  "navigationBarTitleText": "AI + 王晓晨"
+}

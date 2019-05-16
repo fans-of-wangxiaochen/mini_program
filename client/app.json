@@ -1,8 +1,15 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/about/index",
+    "pages/ai/index",
+    "pages/magazine/index",
+    "pages/md/index",
     "pages/upload/index",
-    "pages/about/index"
+    "pages/profile/index",
+    "pages/tv/index",
+    "pages/music/index",
+    "pages/video/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -13,23 +20,49 @@
   "tabBar": {
     "list": [
       {
-       "pagePath":"pages/index/index",
-       "text":"首页",
-       "iconPath":"images/home.png",
-       "selectedIconPath":"images/home.png"
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home.png"
       },
       {
-      "pagePath": "pages/upload/index",
-      "text": "照片识别",
-      "iconPath":"images/camera.png",
-      "selectedIconPath":"images/camera.png"
+        "pagePath": "pages/upload/index",
+        "text": "照片识别",
+        "iconPath": "images/camera.png",
+        "selectedIconPath": "images/camera.png"
       },
       {
-      "pagePath": "pages/about/index",
-      "text": "关于",
-      "iconPath": "images/people.png",
-      "selectedIconPath":"images/people.png"
+        "pagePath": "pages/ai/index",
+        "text": "AI +",
+        "iconPath": "images/ai.png",
+        "selectedIconPath": "images/ai.png"
+      },
+      {
+        "pagePath": "pages/profile/index",
+        "text": "个人中心",
+        "iconPath": "images/media.png",
+        "selectedIconPath": "images/media.png"
       }
     ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "navigateToMiniProgramAppIdList": [
+    "wx9074de28009e1111",
+    "wx7a2de562948f667b",
+    "wx45644c90ae31b1e5",
+    "wxff7644a579b33405"
+  ],
+  "subpackages": [
+    {
+      "name": "photo",
+      "root": "pages/photo",
+      "pages": ["index"]
+    }
+  ],
+  "preloadRule": {
+    "pages/upload/index": {
+      "network": "wifi",
+      "packages": ["photo"]
+    }
   }
 }

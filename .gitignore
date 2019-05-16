@@ -3,6 +3,7 @@
 /client/*.js
 /client/pages/**/*.js
 /client/utils/*.js
+/client/components/**/*.js
 
 node_modules
 miniprogram_npm

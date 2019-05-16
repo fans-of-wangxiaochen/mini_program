@@ -13,16 +13,16 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad() {
-    let fs = wx.getFileSystemManager();
-    let about_file_path = `${wx.env.USER_DATA_PATH}/about.txt`;
-    let content;
-    let markdown;
-    this.about_file_path = about_file_path;
-
     wx.showLoading({
       title: '努力加载中...',
       mask: true,
     });
+
+    const fs = wx.getFileSystemManager();
+    let about_file_path = `${wx.env.USER_DATA_PATH}/about.txt`;
+    let content;
+    let markdown;
+    this.about_file_path = about_file_path;
 
     // 检查缓存文件
     fs.access({
@@ -60,30 +60,6 @@ Page({
         this.request_about_file();
       },
     });
-
-    // 手指触摸后马上离开
-    this['eventRun_bind_tap'] = event => {};
-
-    // 手指触摸动作开始
-    this['eventRun_bind_touchstart'] = event => {};
-
-    // 手指触摸后移动
-    this['eventRun_bind_touchmove'] = event => {};
-
-    // 手指触摸动作结束
-    this['eventRun_bind_touchend'] = event => {};
-
-    // 手指触摸动作被打断，如来电提醒，弹窗
-    this['eventRun_bind_touchcancel'] = event => {};
-
-    // deprecated replace by longpress
-    this['eventRun_bind_longtap'] = event => {};
-
-    // 手指触摸后，超过350ms再离开，如果指定了事件回调函数并触发了这个事件，tap事件将不被触发
-    this['eventRun_bind_longpress'] = event => {};
-
-    // 在支持 3D Touch 的 iPhone 设备，重按时会触发
-    this['eventRun_bind_touchforcechange'] = event => {};
   },
 
   /**
@@ -184,6 +160,7 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  // onShareAppMessage: function () {
-  // }
+  onShareAppMessage: function() {
+    return {};
+  },
 });

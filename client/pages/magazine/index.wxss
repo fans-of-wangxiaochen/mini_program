@@ -1,0 +1,33 @@
+page {
+  background-color: #f8f9fb;
+}
+
+.grid {
+  width: 96vw;
+  height: 20vh;
+  margin-left: 2vw;
+  background-color: #fff;
+  margin-top: 2vh;
+}
+
+.grid_name {
+  padding-top: 2vh;
+  font-size: 40rpx;
+  padding-left: 10rpx;
+}
+
+.grid_date {
+margin-top: 2vh;
+font-size: 35rpx;
+padding-left: 10rpx;
+}
+
+.grid_from {
+margin-top: 2vh;
+font-size: 35rpx;
+padding-left: 10rpx;
+}
+
+ad {
+  margin-top: 2vh;
+}

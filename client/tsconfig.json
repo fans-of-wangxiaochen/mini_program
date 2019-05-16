@@ -1,17 +1,12 @@
 {
-  "compilerOptions":{
-    "module":"CommonJS",
-     "target": "ES5",
-     "newLine":"LF",
-     "lib":[
-       "ESNext",
-       "dom"
-     ]
+  "compilerOptions": {
+    "module": "CommonJS",
+    "target": "ES5",
+    "newLine": "LF",
+    "lib": ["ESNext", "dom"],
+    "inlineSourceMap": true,
+    "inlineSources": true
   },
-  "include":[
-    "./**/*.ts"
-  ],
-  "exclude":[
-    "node_modules","miniprogram_dist"
-  ]
+  "include": ["./**/*.ts"],
+  "exclude": ["node_modules", "miniprogram_dist"]
 }

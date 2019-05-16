@@ -3,7 +3,8 @@
   "description": "cxyl miniprogram",
   "version": "19.6.0",
   "dependencies": {
-    "towxml": "github:pcit-ce/towxml"
+    "towxml": "github:pcit-ce/towxml",
+    "wx-fetch": "github:khs1994/wx-fetch"
   },
   "devDependencies": {
     "@types/wx": "github:khs1994/types-wx"

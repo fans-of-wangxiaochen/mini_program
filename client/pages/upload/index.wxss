@@ -7,3 +7,8 @@
 .xd-subBtn-hover{
   color: green
 }
+
+button {
+  margin-top: 2vh;
+  width: 96vw;
+}
